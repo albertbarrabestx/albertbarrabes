@@ -1,24 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@200;300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "./typography.css";
 
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-:root,
+:root {
+  /* Colors base que poden ser referenciats pels dos temes */
+  --accent-base: #ff8c42; /* to suau i càlid per ambdós */
+  --muted-base: #d8cfc4;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Lora', serif;
+  --heading-weight: 700;
+  --h2-size: 1.1rem;
+  --body-weight: 300;
+}
+
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --background: #fff8f2;   
+  --foreground: #3b2f2f;   
+  --accent: var(--accent-base); 
+  --muted: var(--muted-base);       
+     
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60;
-  --border: #ab4b08;
+  --background: #12181f;  /* fosc càlid, no blau fred */
+  --foreground: #f5f0ec;  /* text clar però suau */
+  --accent: #ffa466;      /* variant de l’accent càlid més visible en fosc */
+  --muted: #3f3f46;       /* gris càlid per elements secundaris */
+  --border: #ffa466; 
+  --menu:#D4D4D8;
+  
 }
+
+html[data-theme="dark"] nav {
+    color: var(--menu);
+  }
 
 @theme inline {
   --color-background: var(--background);
@@ -38,7 +57,8 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background text-foreground selection:bg-accent/75 selection:text-background;
+    font-family: var(--font-body);font-weight: var(--body-weight);color:var(--foreground);
   }
   a,
   button {
@@ -52,11 +72,24 @@ html[data-theme="dark"] {
   footer {
     @apply mx-auto max-w-app px-4;
   }
+
+  h1, h2, h3, h4, h5, h6,
+  nav, .menu {
+    font-family: var(--font-heading);
+  }
+
+  h2 {
+    font-weight: var(--heading-weight);
+    font-size: var(--h2-size);
+     }
 }
 
 @utility max-w-app {
   @apply max-w-3xl;
 }
+
+ 
+
 
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
