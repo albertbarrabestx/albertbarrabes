@@ -3,7 +3,7 @@ export const SITE = {
   author: "Albert Barrabés",
   profile: "albertbarrabes.com",
   desc: "Desarrollo web y blog personal de Albert Barrabés",
-  title: "carena.dev",
+  title: "lacarena.dev | Albert Barrabés",
   ogImage: "albertbarrabes.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
