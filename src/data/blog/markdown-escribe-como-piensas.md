@@ -1,7 +1,7 @@
 ---
 author: Albert Barrabés
-pubDatetime: 2022-09-23T15:22:00Z
-modDatetime: 2025-06-13T16:52:45.934Z
+pubDatetime: 2022-10-23T15:22:00Z
+modDatetime: 2025-10-23T16:52:45.934Z
 title: Markdown, escribe y no te compliques
 slug: markdown-escribe-y-no-te-compliques
 featured: true
