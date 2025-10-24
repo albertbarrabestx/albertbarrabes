@@ -2,7 +2,7 @@
 author: Albert Barrabés
 pubDatetime: 2022-10-24T15:22:00Z
 modDatetime: 2025-10-24T16:52:45.934Z
-title: Planteamiento para sistema de apadrinamiento de perros con Gravity Forms y pagos recurrentes
+title: Planteamos un sistema de donaciones con Gravity Forms y pagos recurrentes
 slug: apadrinamiento-de-perros-con-gravity-Forms-pagos-recurrentes
 featured: true
 draft: false

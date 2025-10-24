@@ -18,7 +18,7 @@ const headerProps = {
 };
 ---
 
-<li class="my-6">
+<li class="rounded-t-lg px-4 pt-2 transition-all dark:hover:bg-white/3 hover:bg-black/3">
   <a
     href={getPath(id, filePath)}
     class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
@@ -33,4 +33,7 @@ const headerProps = {
   </a>
   <Datetime {pubDatetime} {modDatetime} {timezone} />
   <p>{description}</p>
+  <hr class="my-4 border-t border-muted color:" />
 </li>
+
+

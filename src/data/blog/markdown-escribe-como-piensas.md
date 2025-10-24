@@ -4,7 +4,7 @@ pubDatetime: 2022-10-23T15:22:00Z
 modDatetime: 2025-10-23T16:52:45.934Z
 title: Markdown, escribe y no te compliques
 slug: markdown-escribe-y-no-te-compliques
-featured: true
+featured: false
 draft: false
 tags:
   - Markdown
